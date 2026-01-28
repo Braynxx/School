@@ -1,0 +1,7 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "School"]
+	url = https://github.com/Braynxx/School.git
+	fetch = +refs/heads/*:refs/remotes/School/*
