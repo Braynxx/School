@@ -3,8 +3,12 @@ commandArg=$1
 stemFiles=$(cat "$2")
 while read -r files; do
     for file in $files; do
-        fileArgs=$(cat "$file".args)
-        input=$("$commandArg" $fileArgs < "$file".in)
+        if [ -f ""$file".args" ]; then
+            fileArgs=$(cat "$file".args)
+            input=$("$commandArg" $fileArgs < "$file".in)
+        else
+            input=$("$commandArg" < "$file".in)
+        fi
         output=$(cat "$file".out)
         if diff -q <(printf "$input") <(printf "$output") >/dev/null; then
             printf "Test $file passed\n"
