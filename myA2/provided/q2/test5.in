@@ -1,0 +1,8 @@
+r a "Hello World"
+r b Hello
+a b " World"
+d a
+d b
+p a
+p b
+q
