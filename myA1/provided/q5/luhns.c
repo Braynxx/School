@@ -46,9 +46,9 @@ int main() {
         finalSum = sumOdd;
     }
     if (((finalSum * 9) % 10) == nth_digit) {
-            printf("Valid");
+            printf("Valid\n");
         } else {
-            printf("Invalid");
+            printf("Invalid\n");
         }
     return 0;
 }
