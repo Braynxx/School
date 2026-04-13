@@ -1,0 +1,9 @@
+String: "123"
+Length: 3
+Capacity: 4
+String: "12345"
+Length: 5
+Capacity: 8
+String: "123456789012345"
+Length: 15
+Capacity: 16

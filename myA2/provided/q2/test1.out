@@ -1,0 +1,12 @@
+nowhitespace
+String: "nowhitespace"
+Length: 12
+Capacity: 16
+read with whitespace
+String: "read with whitespace"
+Length: 20
+Capacity: 32
+abcd
+String: "abcd"
+Length: 4
+Capacity: 4

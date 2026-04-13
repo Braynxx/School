@@ -10,14 +10,14 @@ while read -r files; do
             input=$("$commandArg" < "$file".in)
         fi
         output=$(cat "$file".out)
-        if diff -q <(printf "$input") <(printf "$output") >/dev/null; then
+        if diff -q <(printf '%s' "$input") <(printf '%s' "$output") >/dev/null; then
             printf "Test $file passed\n"
         else
             printf "Test $file failed\n"
             printf "Expected output:\n"
-            printf "$output\n"
+            printf '%s\n' "$output"
             printf "Actual output:\n"
-            printf "$input\n"
+            printf '%s\n' "$input"
         fi
     done
 done <<< "$stemFiles"

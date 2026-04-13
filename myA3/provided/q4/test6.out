@@ -1,0 +1,7 @@
+The beginning of allocated memory is 0x55d653e1000
+Second block is exactly 4096 bytes ahead of first block at 0x55d653e2000
+The end of allocated memory is 0x55d653e3000
+Done reading in data, now printing out everything read in.
+Value 0 at 0x55d653e1000: 'x'
+Value 1 at 0x55d653e1002: 'y'
+Value 2 at 0x55d653e1004: 'z'

@@ -1,0 +1,8 @@
+a string
+String: "a string"
+Length: 8
+Capacity: 8
+a string with more added!
+String: "a string with more added!"
+Length: 25
+Capacity: 32
