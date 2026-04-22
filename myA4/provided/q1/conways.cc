@@ -17,11 +17,40 @@ int main() {
     std::string line;
     int rows = -1;
     int cols = -1;
-    char tempGrid[100][100];
+    int capacity = 100;
+    char** tempGrid = new char*[capacity];
     while(std::getline(std::cin, line) && rows < 100) {
         if(rows == -1) {
             cols = line.length();
+            for(int i = 0; i < capacity; i++){
+                tempGrid[i] = new char[cols];
+            }
             rows = 0;   
+        }
+        if(rows > capacity){
+            capacity *= 2;
+            char** newTemp = new char*[capacity];
+            for(int i = 0; i < capacity; i++){
+                newTemp[i] = new char[cols];
+            }
+            for(int i = 0; i < capacity; i++){
+                for(int j = 0; j < cols; j++){
+                    newTemp[i][j] = tempGrid[i][j];
+                }
+            } 
+            capacity /= 2;
+            deleteCells(tempGrid, capacity);
+            capacity *= 2;
+            char** tempGrid = new char*[capacity];
+            for(int i = 0; i < capacity; i++){
+                tempGrid[i] = new char[cols];
+            }
+            for(int i = 0; i < capacity; i++){
+                for(int j = 0; j < cols; j++){
+                    tempGrid[i][j] = newTemp[i][j];
+                }
+            } 
+            deleteCells(newTemp, capacity);
         }
         if(line[0] != 'O' && line[0] != '.') {
             break;
