@@ -27,7 +27,7 @@ int main() {
             }
             rows = 0;   
         }
-        if(rows > capacity){
+        if(rows >= capacity){
             capacity *= 2;
             char** newTemp = new char*[capacity];
             for(int i = 0; i < capacity; i++){
